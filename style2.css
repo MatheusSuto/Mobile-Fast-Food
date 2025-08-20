@@ -1,0 +1,56 @@
+/* A simple style for the burger menu icon */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #FCC696;
+}
+
+/* Initial state for all sections - hidden by default */
+.page-section {
+    display: none;
+}
+
+/* Only show the section with this class */
+.page-section.active {
+    display: block;
+}
+
+/* Responsive menu styling */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        /* Adjust based on header height */
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar a {
+        padding: 1rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    #menu-toggle:checked~.navbar {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-desktop {
+        display: none;
+    }
+}
+
+#hero {
+    background-image: url(images/burger\ and\ fries\ to\ the\ background\ title.jpg);
+
+}
+

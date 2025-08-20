@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Joint</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Header Section -->
+    <header class="bg-red-600 shadow-lg text-white p-4 flex justify-between items-center fixed top-0 w-full z-50">
+        <a href="#" class="text-3xl font-bold tracking-wide">Burger Joint</a>
+        
+        <!-- Burger Menu Toggle -->
+        <input type="checkbox" id="menu-toggle" class="hidden">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+        <!-- Navigation Links -->
+        <nav class="navbar nav-desktop flex space-x-6">
+            <a href="#" class="nav-link text-lg hover:underline transition duration-300" data-target="menu">Produtos</a>
+            <a href="#" class="nav-link text-lg hover:underline transition duration-300" data-target="pictures">Imagens</a>
+            <a href="#" class="nav-link text-lg hover:underline transition duration-300" data-target="login">Login</a>
+            <a href="#" class="nav-link text-lg hover:underline transition duration-300" data-target="contact">Contato</a>
+            <a href="#" class="nav-link text-lg hover:underline transition duration-300" data-target="delivery">Delivery</a>
+            <a href="#" class="nav-link text-lg hover:underline transition duration-300" data-target="payment">Pagamento</a>
+        </nav>
+    </header>
+
+    <main class="pt-16">
+        <!-- Hero Section - Always visible -->
+        <section id="hero" class="bg-cover bg-center h-[70vh] flex items-center justify-center text-white text-center p-4" style="background-color: orangered;">
+            <div>
+                <h1 class="text-5xl md:text-6xl font-black mb-4 drop-shadow-md">Escolha seu Hambúrguer</h1>
+                <p class="text-xl md:text-2xl mb-8 drop-shadow-md">hambúrgueres frescos, suculentos, e deliciosos</p>
+                <a href="#" class="bg-white text-red-600 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition duration-300 transform hover:scale-105" data-target="menu">Faça seu pedido</a>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="page-section active bg-white p-8 md:p-16">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-10">Nosso Menu</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Burger Card 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl">
+                    <img src="images/classicCheeseburger.avif" alt="Classic Cheeseburger" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Cheeseburger Clássico</h3>
+                        <p class="text-gray-600 mb-4">Hambúrguer de carne, queijo cheddar, alfaçe, tomate, cebola, picles e nosso molho especial. (Acompanha batatas fritas pequenas)</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-black text-red-600">R$21,90</span>
+                            <button class="bg-red-600 text-white font-bold py-2 px-6 rounded-full hover:bg-red-700 transition duration-300">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Burger Card 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl">
+                    <img src="images/spicyBBQ.jpg" alt="Spicy BBQ Burger" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Hambúrguer apimentado de BBQ</h3>
+                        <p class="text-gray-600 mb-4">Hambúrguer de carne feito na brasa, queijo cheddar, cebola caramelizada, molho BBQ e bacon.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-black text-red-600">R$19.90</span>
+                            <button class="bg-red-600 text-white font-bold py-2 px-6 rounded-full hover:bg-red-700 transition duration-300">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Burger Card 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl">
+                    <img src="images/VEgetarian Burger.jpg" alt="Vegetaian Burger" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Hambúrguer Vegano</h3>
+                        <p class="text-gray-600 mb-4">Hambúrguer vegano, tomate, rúcula e molho vegano, em um pão de 3 ervas.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-black text-red-600">R$25.90</span>
+                            <button class="bg-red-600 text-white font-bold py-2 px-6 rounded-full hover:bg-red-700 transition duration-300">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pictures Section -->
+        <section id="pictures" class="page-section bg-gray-200 p-8 md:p-16">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-10">Imagens</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <img src="images/Burguer1.webp" alt="Burger 1" class="w-full h-48 object-cover rounded-lg shadow-md hover:scale-105 transition duration-300">
+                <img src="images/Fires.jfif" alt="Fries" class="w-full h-48 object-cover rounded-lg shadow-md hover:scale-105 transition duration-300">
+                <img src="images/classicCheeseburger.avif" alt="Burger 2" class="w-full h-48 object-cover rounded-lg shadow-md hover:scale-105 transition duration-300">
+                <img src="images/milkshake.webp" alt="Milkshake" class="w-full h-48 object-cover rounded-lg shadow-md hover:scale-105 transition duration-300">
+                <img src="images/spicyBBQ.jpg" alt="Burger 3" class="w-full h-48 object-cover rounded-lg shadow-md hover:scale-105 transition duration-300">
+                <img src="images/team.webp" alt="Team" class="w-full h-48 object-cover rounded-lg shadow-md hover:scale-105 transition duration-300">
+            </div>
+        </section>
+
+        <!-- Login Section -->
+        <section id="login" class="page-section bg-white p-8 md:p-16">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-10">Login</h2>
+            <div class="max-w-md mx-auto bg-gray-100 p-8 rounded-lg shadow-lg">
+                <form class="flex flex-col space-y-4">
+                    <label for="username" class="font-semibold text-gray-700">Username</label>
+                    <input type="text" id="username" name="username" class="p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500">
+                    <label for="password" class="font-semibold text-gray-700">Senha</label>
+                    <input type="password" id="password" name="password" class="p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500">
+                    <button type="submit" class="bg-red-600 text-white font-bold py-3 px-6 rounded-full hover:bg-red-700 transition duration-300">Log In</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="page-section bg-gray-200 p-8 md:p-16">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-10">Contate-nos</h2>
+            <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
+                <p class="text-center text-gray-700 mb-6">Tem alguma dúvida? Pergunte-nos!</p>
+                <div class="text-center mb-6">
+                    <p class="font-semibold">Telefone: <span class="text-red-600">555-1234</span></p>
+                    <p class="font-semibold">Email: <span class="text-red-600">info@yourburgerjoint.com</span></p>
+                </div>
+                <form class="flex flex-col space-y-4">
+                    <label for="name" class="font-semibold text-gray-700">Nome</label>
+                    <input type="text" id="name" name="name" class="p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500">
+                    <label for="email" class="font-semibold text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" class="p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500">
+                    <label for="message" class="font-semibold text-gray-700">Mensagem</label>
+                    <textarea id="message" name="message" rows="4" class="p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+                    <button type="submit" class="bg-red-600 text-white font-bold py-3 px-6 rounded-full hover:bg-red-700 transition duration-300">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Delivery Section -->
+        <section id="delivery" class="page-section bg-white p-8 md:p-16">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-10">Informação de Delivery</h2>
+            <div class="max-w-2xl mx-auto text-center space-y-4 text-lg text-gray-700">
+                <p>Entregamos a qualquer lugar em um raio de  <span class="font-semibold text-red-600">10 km</span> de nossa localização.</p>
+                <p>Taxa de <span class="font-semibold text-red-600">R$3,50</span>. Entrega grátis para todos os pedidos acima de  <span class="font-semibold text-red-600">R$100,00!</span></p>
+                <p>Our estimated delivery time is <span class="font-semibold text-red-600">30-45 minutes</span>.</p>
+            </div>
+        </section>
+
+        <!-- Payment Section -->
+        <section id="payment" class="page-section bg-gray-200 p-8 md:p-16">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-10">Pagamento</h2>
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg space-y-6">
+                <div class="order-summary border-b pb-4">
+                    <h3 class="text-2xl font-bold mb-4">Resumo do Pedido</h3>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between items-center text-lg">
+                            <span>Cheeseburger Clássico</span>
+                            <span class="font-semibold">R$0</span>
+                        </li>
+                        <li class="flex justify-between items-center text-lg">
+                            <span>Hambúrguer apimentado de BBQ</span>
+                            <span class="font-semibold">R$0</span>
+                        </li>
+                    </ul>
+                    <div class="mt-4 pt-4 border-t-2 border-dashed flex justify-between items-center text-xl font-bold">
+                        <span>Total:</span>
+                        <span>R$0,00</span>
+                    </div>
+                </div>
+
+                <div class="payment-methods">
+                    <h3 class="text-2xl font-bold mb-4">Método de Pagamento</h3>
+                    <p class="text-gray-700 mb-4">Aceitamos PIX!</p>
+                    <div class="flex items-center space-x-4">
+                        <img src="images/pixLogo.webp" alt="PIX" class="rounded-lg shadow" height="100px" width="100px">
+                        <img src="images/paypal.jfif" alt="PayPal" class="rounded-lg shadow" height="100px" width="100px">
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button class="bg-red-600 text-white font-bold py-3 px-8 rounded-full hover:bg-red-700 transition duration-300 transform hover:scale-105">Proceed to Checkout</button>
+                </div>
+            </div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center p-6 mt-10">
+        <p>&copy; 2025 Burger Joint. All rights reserved.</p>
+    </footer>
+</body>
+</html>
